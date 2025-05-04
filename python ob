@@ -14,8 +14,8 @@ class Car:
         return(f"auto barvi {self.color} zatočí v pravo")
 
     def go_straight(self):
-        self.distance += 10
-        return("Auto popojelo o 10 metrů") 
+        self.distance += 25
+        return("Auto popojelo o 25 metrů") 
 
     def car_distance(self):
        return(self.distance) 
@@ -29,6 +29,8 @@ class VipCar(Car):
         self.password = password
         self.software_control = True
        
+    def turn_on_off_software_control(self, turn_on):
+        self.software_control = turn_on
 
 
 
@@ -43,10 +45,15 @@ car3 = Car("black", 2, "fiat")
 
 vip_car1 = VipCar("black", 4, "kia", "admin123")
 
-print(vip_car1.password)
-print(vip_car1.color)
-print(vip_car1.turn_left())
-print(vip_car1.software_control)
+print(vip_car1.go_straight())
+print(vip_car1.go_straight())
+print(vip_car1.car_distance())
+
+#print(vip_car1.password)
+#print(vip_car1.color)
+#print(vip_car1.software_control)
+#vip_car1.turn_on_off_software_control(False)
+#print(vip_car1.software_control)
 
 #print (car1.owner("Honzík"))
 #print (car2.owner("Michal"))
