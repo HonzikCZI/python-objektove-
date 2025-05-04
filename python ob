@@ -1,0 +1,87 @@
+# =========================== LOGIKA =============================
+class Car:
+    # constructor
+    def __init__(self, color, doors, brand,):
+        self.color = color
+        self.dors = doors
+        self.brand = brand
+        self.distance = 0
+
+    def turn_left(self):
+        return(f"auto značky {self.brand} zatočí vlevo")
+
+    def turn_right(self):
+        return(f"auto barvi {self.color} zatočí v pravo")
+
+    def go_straight(self):
+        self.distance += 10
+        return("Auto popojelo o 10 metrů") 
+
+    def car_distance(self):
+       return(self.distance) 
+    
+    def owner(self, owner_name):
+        return f"vlastníkem auta je {owner_name}"
+    
+class VipCar(Car):
+    def __init__(self, color, doors, brand, password):
+        super().__init__(color, doors, brand)
+        self.password = password
+        self.software_control = True
+       
+
+
+
+# atributy = vlastnosti (proměnné)
+# metody = funkce
+
+
+# =========================== POUŽITÍ LOGIKY =====================
+car1 = Car("red", 4, "skoda")
+car2 = Car("white", 4, "audi")
+car3 = Car("black", 2, "fiat")
+
+vip_car1 = VipCar("black", 4, "kia", "admin123")
+
+print(vip_car1.password)
+print(vip_car1.color)
+print(vip_car1.turn_left())
+print(vip_car1.software_control)
+
+#print (car1.owner("Honzík"))
+#print (car2.owner("Michal"))
+#print (car3.owner("Evička"))
+
+#car1.car_distance()
+#car1.car_distance()
+#car1.go_straight()
+#car1.go_straight()
+#car1.car_distance()
+
+
+#print(car1.distance)
+#print(car2.distance)
+#print(car3.distance)
+
+#car1.go_straight()
+#car2.go_straight()
+#car3.go_straight()
+
+#print(car1.distance)
+#print(car2.distance)
+#print(car2.distance)
+
+
+#print(car1.color)
+#print(car2.color)
+#print(car3.color)
+#print(car1.brand)
+#print(car3.dors)
+
+#car1.turn_left()
+#car2.turn_left()  
+#car3.turn_left()
+
+#car1.turn_right()
+#car2.turn_right()
+#car3.turn_right()
